@@ -1,6 +1,5 @@
-package com.example.taskRest.data.entity;
+package com.example.taskRest.dto;
 
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -8,17 +7,13 @@ import lombok.Setter;
 
 import java.io.Serializable;
 
-@Entity
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Customer implements Serializable {
+public class CustomerDto implements Serializable {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "CUSTOMERNAME", nullable = false)
     private String customerName;
 
 }
