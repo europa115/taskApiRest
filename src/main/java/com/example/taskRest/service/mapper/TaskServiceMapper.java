@@ -2,8 +2,10 @@ package com.example.taskRest.service.mapper;
 
 import com.example.taskRest.data.entity.Task;
 import com.example.taskRest.dto.TaskDto;
+import org.springframework.stereotype.Service;
 
-public class TaskMapper extends AbstractServiceMapper<Task, TaskDto>{
+@Service
+public class TaskServiceMapper extends AbstractServiceMapper<Task, TaskDto>{
 
 
     @Override
