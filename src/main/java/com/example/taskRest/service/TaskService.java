@@ -6,8 +6,10 @@ import com.example.taskRest.data.repository.CustomerRepository;
 import com.example.taskRest.dto.TaskDto;
 import com.example.taskRest.service.mapper.TaskServiceMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-public class TaskService extends AbstractBusinessService<Task,Long, TaskDto, TaskRepository, TaskServiceMapper>{
+@Service
+public class TaskService extends AbstractBusinessService<Task, Long, TaskDto, TaskRepository, TaskServiceMapper> {
 
     private final CustomerRepository customerRepository;
 
@@ -21,8 +23,8 @@ public class TaskService extends AbstractBusinessService<Task,Long, TaskDto, Tas
     public TaskDto save(TaskDto taskDto) {
 
         final Task entity = getServiceMapper().toEntity(taskDto);
-        entity.setCustomer(this.customerRepository.findById(taskDto.getIdCustomer())
-                .orElseThrow(() -> new RuntimeException(String.format("The user %s does not exist", taskDto.getIdCustomer()))));
+        /*entity.setCustomer(this.customerRepository.findById(taskDto.getIdCustomer())
+                .orElseThrow(() -> new RuntimeException(String.format("The user %s does not exist", taskDto.getIdCustomer()))));*/
         final Task savedEntity = this.getRepository().save(entity);
         return getServiceMapper().toDto(savedEntity);
     }

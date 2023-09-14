@@ -25,6 +25,6 @@ public class Task implements Serializable {
     private String description;
     @Column(name = "COMPLETED", nullable = false)
     private boolean completed;
-    @ManyToOne
-    private Customer customer;
+    /*@ManyToOne
+    private Customer customer;*/
 }

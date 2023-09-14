@@ -1,0 +1,33 @@
+{
+  "info": {
+    "_postman_id": "id_postman",
+    "name": "Api Task Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Crear Tarea de Ejemplo",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"id\": null,\n  \"name\": \"Tarea de ejemplo\",\n  \"description\": \"Esta es una tarea de ejemplo para probar la API\",\n  \"completed\": true\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/tasks",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "tasks"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
